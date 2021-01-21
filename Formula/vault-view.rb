@@ -6,14 +6,6 @@ class VaultView < Formula
   license "Apache 2.0"
   bottle :unneeded
 
-  if Hardware::CPU.is_32_bit?
-    if OS.linux?
-      def install
-        bin.install "bin/linux/386/splicectl"
-      end
-    end
-  else
-
   if OS.mac?
     url "https://github.com/Maahsome/vault-view/releases/download/v0.0.5/vault-view-v0.0.5-darwin-amd64.tar.gz"
     sha256 "622753ac45377b5cd80b4a44f58f3f207a9e251ed46ff43fcd29109afba86c1b"
@@ -26,7 +18,6 @@ class VaultView < Formula
       url "https://github.com/Maahsome/vault-view/releases/download/v0.0.5/vault-view-v0.0.5-linux-amd64.tar.gz"
       sha256 "8e476ad2ca130e9c0bf989ba0514132ceacd0ce8d58f4108263f9adedc700111"
     end
-
   end
 
   def install
