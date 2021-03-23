@@ -5,20 +5,20 @@
 class ChangelogPr < Formula
   desc "CLI tool for building changelog from PR descriptions based on a template"
   homepage "https://github.com/maahsome/changelog-pr/"
-  version "0.0.3"
+  version "0.1.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/maahsome/changelog-pr/releases/download/v0.0.3/changelog-pr_darwin_amd64.tar.gz"
-    sha256 "0aaeeb175e06cb758c15488aba316310bb90e26d3e56b7e32bd6691581a03611"
+    url "https://github.com/maahsome/changelog-pr/releases/download/v0.1.0/changelog-pr_darwin_amd64.tar.gz"
+    sha256 "68cacdfd521ec164130410704c86d1e1265814ff3120f24c9712f842f62f5d90"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/maahsome/changelog-pr/releases/download/v0.0.3/changelog-pr_linux_amd64.tar.gz"
-    sha256 "3929dcd552a80575f6eeff2557ef60631f50f921ea913fc456c5bc18983c7a02"
+    url "https://github.com/maahsome/changelog-pr/releases/download/v0.1.0/changelog-pr_linux_amd64.tar.gz"
+    sha256 "97e0b0c80ef137c17651ac5d7d84972bd4918b17fbc2845d1a5179a39b16a46b"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/maahsome/changelog-pr/releases/download/v0.0.3/changelog-pr_linux_arm64.tar.gz"
-    sha256 "2cc74ae4e2ead266d57b76c95baf85cca0f73544862e6b194873571adf3470dc"
+    url "https://github.com/maahsome/changelog-pr/releases/download/v0.1.0/changelog-pr_linux_arm64.tar.gz"
+    sha256 "9570522da9bc8ad651e1d2df42e1c4c4033f47b8a14936d533e2967371155e7c"
   end
 
   def install
