@@ -5,24 +5,24 @@
 class GitlabTool < Formula
   desc "CLI tool to reduce reliance on GUI interactions, initially driven by wanting to grep through TRACE output of pipeline jobs"
   homepage "https://github.com/maahsome/gitlab-tool/"
-  version "0.0.1"
+  version "0.0.2"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/maahsome/gitlab-tool/releases/download/v0.0.1/gitlab-tool_darwin_amd64.tar.gz"
-      sha256 "a5bf00642ae177e5efba227c910aff916971d57e07c17621820e07881c1045e4"
+      url "https://github.com/maahsome/gitlab-tool/releases/download/v0.0.2/gitlab-tool_darwin_amd64.tar.gz"
+      sha256 "311a37e8b24c6e4fddf05fced29ffff4f0c90e50ede37611a183ffd8662f2245"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/maahsome/gitlab-tool/releases/download/v0.0.1/gitlab-tool_linux_amd64.tar.gz"
-      sha256 "3ebfa88c73de8484eb0ccc68d2fb76df53ce85de9a18c2b5a9a58dc1c9e1c353"
+      url "https://github.com/maahsome/gitlab-tool/releases/download/v0.0.2/gitlab-tool_linux_amd64.tar.gz"
+      sha256 "d84ab149583d6936e63407733d9c28a67c9dc8a1051a7e625fa0c9e179e3b31b"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/maahsome/gitlab-tool/releases/download/v0.0.1/gitlab-tool_linux_arm64.tar.gz"
-      sha256 "10472bc20a4aeb146534decfa3edef6b7ed05b4d15c505f6e114fc5b29e6fd53"
+      url "https://github.com/maahsome/gitlab-tool/releases/download/v0.0.2/gitlab-tool_linux_arm64.tar.gz"
+      sha256 "b095d7a84bc940d11c3ee0327f85cb705edf9076f465d02ee666cc5333ffbb0c"
     end
   end
 
