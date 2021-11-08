@@ -6,7 +6,6 @@ class VaultView < Formula
   desc "CLI tool with TUI interface used to browse Hashicorp Vault secret stores"
   homepage "https://github.com/maahsome/vault-view/"
   version "0.0.6"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/maahsome/vault-view/releases/download/v0.0.6/vault-view_darwin_amd64.tar.gz"

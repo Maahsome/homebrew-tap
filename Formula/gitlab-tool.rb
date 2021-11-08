@@ -6,7 +6,6 @@ class GitlabTool < Formula
   desc "CLI tool to reduce reliance on GUI interactions, initially driven by wanting to grep through TRACE output of pipeline jobs"
   homepage "https://github.com/maahsome/gitlab-tool/"
   version "0.0.3"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
