@@ -6,7 +6,6 @@ class ChangelogPr < Formula
   desc "CLI tool for building changelog from PR descriptions based on a template"
   homepage "https://github.com/maahsome/changelog-pr/"
   version "0.1.0"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/maahsome/changelog-pr/releases/download/v0.1.0/changelog-pr_darwin_amd64.tar.gz"
