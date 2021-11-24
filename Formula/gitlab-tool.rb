@@ -5,28 +5,36 @@
 class GitlabTool < Formula
   desc "CLI tool to reduce reliance on GUI interactions, initially driven by wanting to grep through TRACE output of pipeline jobs"
   homepage "https://github.com/maahsome/gitlab-tool/"
-  version "0.0.3"
+  version "0.0.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/maahsome/gitlab-tool/releases/download/v0.0.3/gitlab-tool_darwin_amd64.tar.gz"
-      sha256 "495438db64388d98ad71a6aca2744791d2352fb957d5b3ed59a910fa37f5019e"
+      url "https://github.com/maahsome/gitlab-tool/releases/download/v0.0.4/gitlab-tool_darwin_amd64.tar.gz"
+      sha256 "1815423bd0afcb8644ea0a2d261c8e186f233bca15963633e91c432d4db1f0d3"
+
+      def install
+        bin.install "gitlab-tool"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/maahsome/gitlab-tool/releases/download/v0.0.3/gitlab-tool_linux_amd64.tar.gz"
-      sha256 "668573ecb6a01aa1668d54d87c67d1b58db5b93d6568ad4ed65110bf1b4025f1"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/maahsome/gitlab-tool/releases/download/v0.0.3/gitlab-tool_linux_arm64.tar.gz"
-      sha256 "4c39e75a9735727832fe3a93ae0d963e716f323738b08036abc3cbe906d6600e"
-    end
-  end
+      url "https://github.com/maahsome/gitlab-tool/releases/download/v0.0.4/gitlab-tool_linux_arm64.tar.gz"
+      sha256 "140109cc9ee83d8a3edc81d1b6838ea6165aa034f94c7da8e378d99db8ce0a14"
 
-  def install
-    bin.install "gitlab-tool"
+      def install
+        bin.install "gitlab-tool"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/maahsome/gitlab-tool/releases/download/v0.0.4/gitlab-tool_linux_amd64.tar.gz"
+      sha256 "19fc16b6524fcb553a1114ab00d87628fcf4a161945f579f570e96e25b6e7b0b"
+
+      def install
+        bin.install "gitlab-tool"
+      end
+    end
   end
 
   test do
