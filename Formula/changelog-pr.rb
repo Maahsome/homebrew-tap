@@ -5,12 +5,12 @@
 class ChangelogPr < Formula
   desc "CLI tool for building changelog from PR descriptions based on a template"
   homepage "https://github.com/Maahsome/changelog-pr/"
-  version "0.2.3"
+  version "0.2.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Maahsome/changelog-pr/releases/download/v0.2.3/changelog-pr_darwin_amd64.tar.gz"
-      sha256 "9518981b2f7ec7a2247e0d0202ccd98437cea1baabdc9ff2354786937ebd547d"
+      url "https://github.com/Maahsome/changelog-pr/releases/download/v0.2.4/changelog-pr_darwin_amd64.tar.gz"
+      sha256 "adfd56b1d28d702062d07d7b7cdb997e44290b20b0c76ad97622fc10d366691f"
 
       def install
         bin.install "changelog-pr"
@@ -20,16 +20,16 @@ class ChangelogPr < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/Maahsome/changelog-pr/releases/download/v0.2.3/changelog-pr_linux_amd64.tar.gz"
-      sha256 "d644631f1b2a69b3e80ad0c6950c32d5d960c8386845f07dae9dece46737dfb4"
+      url "https://github.com/Maahsome/changelog-pr/releases/download/v0.2.4/changelog-pr_linux_amd64.tar.gz"
+      sha256 "c505fcd0068200d7bb155cb03d1817d3917239854dbcfcdaf35c6ee6c5ce5253"
 
       def install
         bin.install "changelog-pr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Maahsome/changelog-pr/releases/download/v0.2.3/changelog-pr_linux_arm64.tar.gz"
-      sha256 "23f02094b1986e41766487d94f156228a33afa5219ad0aefe801297fbd8e9d2c"
+      url "https://github.com/Maahsome/changelog-pr/releases/download/v0.2.4/changelog-pr_linux_arm64.tar.gz"
+      sha256 "7d86123b3cdbddbaed88264a7efeedaf47018a4bb9b4e8c2acd5a61717d7d2da"
 
       def install
         bin.install "changelog-pr"
