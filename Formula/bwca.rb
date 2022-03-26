@@ -5,20 +5,20 @@
 class Bwca < Formula
   desc "Bitwarden has created a SERVE mode for the CLI tool, this CLI interacts with that REST API on localhost"
   homepage "https://github.com/maahsome/bwca/"
-  version "0.0.14"
+  version "0.0.15"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/maahsome/bwca/releases/download/v0.0.14/bwca_darwin_amd64.tar.gz"
-      sha256 "29cf148cc6f14058b076c84343336aa695c8668ad478574d2897c991d53eca6b"
+    if Hardware::CPU.arm?
+      url "https://github.com/maahsome/bwca/releases/download/v0.0.15/bwca_darwin_arm64.tar.gz"
+      sha256 "8c74a19c7117bdabb06b4c50a6c9ef13e139fb4235ede166c261ef4c8c99c801"
 
       def install
         bin.install "bwca"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/maahsome/bwca/releases/download/v0.0.14/bwca_darwin_arm64.tar.gz"
-      sha256 "a317e144e7b6226249a56738984470c9c2db6d0542ca582eb887c75c748e144d"
+    if Hardware::CPU.intel?
+      url "https://github.com/maahsome/bwca/releases/download/v0.0.15/bwca_darwin_amd64.tar.gz"
+      sha256 "999c2ccccf13d8e31862e5932b3e5aef9a3f4b6b54b0eb91f1d4b53fdf69b3a5"
 
       def install
         bin.install "bwca"
@@ -27,17 +27,17 @@ class Bwca < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/maahsome/bwca/releases/download/v0.0.14/bwca_linux_amd64.tar.gz"
-      sha256 "f25244a1f13449b0e0f8ce476c4a7de5331396734af41ee6bd56be03060e40ad"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/maahsome/bwca/releases/download/v0.0.15/bwca_linux_arm64.tar.gz"
+      sha256 "3992b34519a0c729ff188e0f2444512722d4d61cbe4ea14d263cb4cee4ec3e05"
 
       def install
         bin.install "bwca"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/maahsome/bwca/releases/download/v0.0.14/bwca_linux_arm64.tar.gz"
-      sha256 "da2b6ce6e7500b4eca653e4a6fa54f46aa26b647f9bf7f8965e1bfbb64f6d435"
+    if Hardware::CPU.intel?
+      url "https://github.com/maahsome/bwca/releases/download/v0.0.15/bwca_linux_amd64.tar.gz"
+      sha256 "9d58c5cb9d70d3e6c0b28c98efb7762a67b0ffde88e476b54fdcd7b4a598794c"
 
       def install
         bin.install "bwca"
