@@ -5,20 +5,20 @@
 class Bwca < Formula
   desc "Bitwarden has created a SERVE mode for the CLI tool, this CLI interacts with that REST API on localhost"
   homepage "https://github.com/maahsome/bwca/"
-  version "0.0.13"
+  version "0.0.14"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/maahsome/bwca/releases/download/v0.0.13/bwca_darwin_amd64.tar.gz"
-      sha256 "c2b6b543a07e6e8229863b6361aa8f8239700af0aa9037da427b66b6fa429673"
+      url "https://github.com/maahsome/bwca/releases/download/v0.0.14/bwca_darwin_amd64.tar.gz"
+      sha256 "29cf148cc6f14058b076c84343336aa695c8668ad478574d2897c991d53eca6b"
 
       def install
         bin.install "bwca"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/maahsome/bwca/releases/download/v0.0.13/bwca_darwin_arm64.tar.gz"
-      sha256 "45cc547525ad85bbc0077a8c8af4e1d33d1a44bbd0ba7e414e796ab10c415ed0"
+      url "https://github.com/maahsome/bwca/releases/download/v0.0.14/bwca_darwin_arm64.tar.gz"
+      sha256 "a317e144e7b6226249a56738984470c9c2db6d0542ca582eb887c75c748e144d"
 
       def install
         bin.install "bwca"
@@ -28,16 +28,16 @@ class Bwca < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/maahsome/bwca/releases/download/v0.0.13/bwca_linux_amd64.tar.gz"
-      sha256 "1a5a3e1c9e15503ca77e0684d5c008a0dfe8f3e9aaa49ba1ea776a8a35256664"
+      url "https://github.com/maahsome/bwca/releases/download/v0.0.14/bwca_linux_amd64.tar.gz"
+      sha256 "f25244a1f13449b0e0f8ce476c4a7de5331396734af41ee6bd56be03060e40ad"
 
       def install
         bin.install "bwca"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/maahsome/bwca/releases/download/v0.0.13/bwca_linux_arm64.tar.gz"
-      sha256 "5b8f501492002f795509c87e9bc82aa032cbcb8673b0bb606f102de24b0eea0f"
+      url "https://github.com/maahsome/bwca/releases/download/v0.0.14/bwca_linux_arm64.tar.gz"
+      sha256 "da2b6ce6e7500b4eca653e4a6fa54f46aa26b647f9bf7f8965e1bfbb64f6d435"
 
       def install
         bin.install "bwca"
