@@ -10,7 +10,7 @@ class Bwca < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/maahsome/bwca/releases/download/v0.0.11/bwca_darwin_arm64.tar.gz"
-      sha256 "ade01582823c6734a16f738fea5c266474ea0d360765b815d1a44aa07b82f549"
+      sha256 "f5825e202a45b0cf5a7ee6a916fe2775e46d7a4e5c2cb138ccabf095f3ae9abb"
 
       def install
         bin.install "bwca"
@@ -18,7 +18,7 @@ class Bwca < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/maahsome/bwca/releases/download/v0.0.11/bwca_darwin_amd64.tar.gz"
-      sha256 "28f19e13bb817bd0f3ca26e7d2115f03338b8eec2d7cf2531fab35f53280ea08"
+      sha256 "102d8b97c74a122f8fdff3fe5a6a5002bc12d16b0cbfec1070fcdbeb12d3dee0"
 
       def install
         bin.install "bwca"
@@ -27,17 +27,17 @@ class Bwca < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/maahsome/bwca/releases/download/v0.0.11/bwca_linux_amd64.tar.gz"
-      sha256 "e6e7af5a01cee44f9f3e1614b1387825db0e0db7348809c30a148aeae86ae805"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/maahsome/bwca/releases/download/v0.0.11/bwca_linux_arm64.tar.gz"
+      sha256 "215dd291a1107a7c2e8b51694c66068da0d854280fa1a760300987f118405704"
 
       def install
         bin.install "bwca"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/maahsome/bwca/releases/download/v0.0.11/bwca_linux_arm64.tar.gz"
-      sha256 "62e63b9ea59d4104afb8139f98c186068849b30d414cca1b613859263ee1ca1d"
+    if Hardware::CPU.intel?
+      url "https://github.com/maahsome/bwca/releases/download/v0.0.11/bwca_linux_amd64.tar.gz"
+      sha256 "78438d92cbb909d3dd46e993710fb054124d268369dd56c5bb52a84613180f18"
 
       def install
         bin.install "bwca"
