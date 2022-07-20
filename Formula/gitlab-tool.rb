@@ -5,20 +5,20 @@
 class GitlabTool < Formula
   desc "CLI tool to reduce reliance on GUI interactions, initially driven by wanting to grep through TRACE output of pipeline jobs"
   homepage "https://github.com/maahsome/gitlab-tool/"
-  version "0.0.5"
+  version "0.0.6"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/maahsome/gitlab-tool/releases/download/v0.0.5/gitlab-tool_darwin_amd64.tar.gz"
-      sha256 "141ce21c5e3d93f1106c71e293d7c58e87c3aeada033a01a4ce4c0b5a8f71177"
+      url "https://github.com/maahsome/gitlab-tool/releases/download/v0.0.6/gitlab-tool_darwin_amd64.tar.gz"
+      sha256 "3d21a04997c36a3da60164f6ced1180dee765c7701bcccd1e404231de46f5159"
 
       def install
         bin.install "gitlab-tool"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/maahsome/gitlab-tool/releases/download/v0.0.5/gitlab-tool_darwin_arm64.tar.gz"
-      sha256 "2774b3152bb797212a09587d341f37f4b3cf760d216e78309fbab95ff5eb3f47"
+      url "https://github.com/maahsome/gitlab-tool/releases/download/v0.0.6/gitlab-tool_darwin_arm64.tar.gz"
+      sha256 "57e10d8254f5ed277bb0fac207a735f623c582b1eafb29bf3a4a3a7325285370"
 
       def install
         bin.install "gitlab-tool"
@@ -28,16 +28,16 @@ class GitlabTool < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/maahsome/gitlab-tool/releases/download/v0.0.5/gitlab-tool_linux_arm64.tar.gz"
-      sha256 "6bb7219f475d5beec4afb6896a09b249c8b2a83803ff4081c42d0043963b100a"
+      url "https://github.com/maahsome/gitlab-tool/releases/download/v0.0.6/gitlab-tool_linux_arm64.tar.gz"
+      sha256 "ed4497308dbcc1f6a02e97b0fd7b1d6abde9922e58cf16dc6a9351b33e2cd163"
 
       def install
         bin.install "gitlab-tool"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/maahsome/gitlab-tool/releases/download/v0.0.5/gitlab-tool_linux_amd64.tar.gz"
-      sha256 "acff81af3a7e404061383ebd4629e5b767a843e580a8282063dc51e302ec0b6e"
+      url "https://github.com/maahsome/gitlab-tool/releases/download/v0.0.6/gitlab-tool_linux_amd64.tar.gz"
+      sha256 "173a9435eab431f7760cde97cacaa16096730e00eaa8f654cec2a61c6d70cd52"
 
       def install
         bin.install "gitlab-tool"
