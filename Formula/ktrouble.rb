@@ -5,20 +5,20 @@
 class Ktrouble < Formula
   desc "CLI tool to reduce reliance on GUI interactions, initially driven by wanting to grep through TRACE output of pipeline jobs"
   homepage "https://github.com/maahsome/ktrouble/"
-  version "0.0.9"
+  version "0.0.10"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/maahsome/ktrouble/releases/download/v0.0.9/ktrouble_darwin_amd64.tar.gz"
-      sha256 "211720d7f5fe1cec1929b36e57b27b9ee76c71728299eab8118ba45b5992d71c"
+    if Hardware::CPU.arm?
+      url "https://github.com/maahsome/ktrouble/releases/download/v0.0.10/ktrouble_darwin_arm64.tar.gz"
+      sha256 "99597a5da9a050baffb1ea9db6bd183aaf6fb5ba71962589889b2d48f2c9442d"
 
       def install
         bin.install "ktrouble"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/maahsome/ktrouble/releases/download/v0.0.9/ktrouble_darwin_arm64.tar.gz"
-      sha256 "abbf1d6252b5530dc78d759a7ef8c1b423a66d52095397627dbfc97ee6df047a"
+    if Hardware::CPU.intel?
+      url "https://github.com/maahsome/ktrouble/releases/download/v0.0.10/ktrouble_darwin_amd64.tar.gz"
+      sha256 "1fc9c404a87bf5be07a4711ca2165a581ecd4ebe33458cb27161ab3130975cd0"
 
       def install
         bin.install "ktrouble"
@@ -27,17 +27,17 @@ class Ktrouble < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/maahsome/ktrouble/releases/download/v0.0.9/ktrouble_linux_arm64.tar.gz"
-      sha256 "a563793abea5280ee959439ed7486a1c60700fd4d195ce78de80cc69f594f40c"
+    if Hardware::CPU.intel?
+      url "https://github.com/maahsome/ktrouble/releases/download/v0.0.10/ktrouble_linux_amd64.tar.gz"
+      sha256 "5bdb8b0a68ab9ee8fdda9b9b840ce2ca372949f8a2a47626db609019ff20c9ee"
 
       def install
         bin.install "ktrouble"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/maahsome/ktrouble/releases/download/v0.0.9/ktrouble_linux_amd64.tar.gz"
-      sha256 "7ac42dc4378dc6a9693b12db19e0eb4eb493e202b1f77229e5d6f5beccf5c309"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/maahsome/ktrouble/releases/download/v0.0.10/ktrouble_linux_arm64.tar.gz"
+      sha256 "aa0630a22e4b4a420eeee8a637a9db6e34c92e37b9f5b404d6f22150ce5829d9"
 
       def install
         bin.install "ktrouble"
