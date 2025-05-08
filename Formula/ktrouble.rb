@@ -5,11 +5,11 @@
 class Ktrouble < Formula
   desc "A CLI tool built to help with troubleshooting inside kubernetes"
   homepage "https://github.com/maahsome/ktrouble/"
-  version "1.0.2"
+  version "1.1.0"
 
   on_macos do
-    url "https://github.com/maahsome/ktrouble/releases/download/v1.0.2/ktrouble_darwin_amd64.tar.gz"
-    sha256 "df0caac274c5abc25e6a1840e853a2391355212c38c4063f75e61b0ad059d55c"
+    url "https://github.com/maahsome/ktrouble/releases/download/v1.1.0/ktrouble_darwin_amd64.tar.gz"
+    sha256 "b6dbe5218714ab49f8644df756035e1b4b30cb110b9e971aa0c21642e703379e"
 
     def install
       bin.install "ktrouble"
@@ -28,8 +28,8 @@ class Ktrouble < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/maahsome/ktrouble/releases/download/v1.0.2/ktrouble_linux_amd64.tar.gz"
-      sha256 "58f65735f132369f9f9ed6a58e624a1b08522c66c5918967acfe79185f1859f2"
+      url "https://github.com/maahsome/ktrouble/releases/download/v1.1.0/ktrouble_linux_amd64.tar.gz"
+      sha256 "93b2c9c212c0776339f9122717d12013817579a6adb79a4550253934c4030a81"
       def install
         bin.install "ktrouble"
       end
