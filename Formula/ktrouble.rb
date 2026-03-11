@@ -5,20 +5,20 @@
 class Ktrouble < Formula
   desc "A CLI tool built to help with troubleshooting inside kubernetes"
   homepage "https://github.com/maahsome/ktrouble/"
-  version "2.0.3"
+  version "2.0.4"
 
   on_macos do
     on_intel do
-      url "https://github.com/maahsome/ktrouble/releases/download/v2.0.3/ktrouble_darwin_amd64.tar.gz"
-      sha256 "db7fa54c23a1ef565898965e459dd480001f5fefaf41873975b39549acae58e6"
+      url "https://github.com/maahsome/ktrouble/releases/download/v2.0.4/ktrouble_darwin_amd64.tar.gz"
+      sha256 "cd542d73c6e9b1e92d91698ecf1d55fe58b12dfe06d3cef2625149533472db4e"
 
       def install
         bin.install "ktrouble"
       end
     end
     on_arm do
-      url "https://github.com/maahsome/ktrouble/releases/download/v2.0.3/ktrouble_darwin_arm64.tar.gz"
-      sha256 "9337142789d925d98352fa4210ed49dd15ffb9afcc223b3cc97399f7b77a0004"
+      url "https://github.com/maahsome/ktrouble/releases/download/v2.0.4/ktrouble_darwin_arm64.tar.gz"
+      sha256 "cc3f162d63b7f99fb8d5a006a20545bd0ed17b8a4c22256d9d5c193b3683b08b"
 
       def install
         bin.install "ktrouble"
@@ -29,8 +29,8 @@ class Ktrouble < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/maahsome/ktrouble/releases/download/v2.0.3/ktrouble_linux_amd64.tar.gz"
-        sha256 "01532aaba5d48f30902f01c96318b0803d95a85f8cea3d919311b94609107dbc"
+        url "https://github.com/maahsome/ktrouble/releases/download/v2.0.4/ktrouble_linux_amd64.tar.gz"
+        sha256 "9e697bb510088b9ee5a9eead6deb4e39fc3319b11f6629cf3bb9cebcde7be20d"
 
         def install
           bin.install "ktrouble"
@@ -39,8 +39,8 @@ class Ktrouble < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/maahsome/ktrouble/releases/download/v2.0.3/ktrouble_linux_arm64.tar.gz"
-        sha256 "0a867844884a69ec80f89e3110d10391b6f7516eeae630bbb9a6d67fb7764066"
+        url "https://github.com/maahsome/ktrouble/releases/download/v2.0.4/ktrouble_linux_arm64.tar.gz"
+        sha256 "3d978d9cd544ee35554641396901e90389dffcc8128d805971fa81bd1dbff859"
 
         def install
           bin.install "ktrouble"
